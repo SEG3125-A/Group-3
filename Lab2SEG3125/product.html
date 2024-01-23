@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Business website</title>
+  </head>
+  <style>
+      body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+  }
+
+  label {
+      display: block;
+      margin-bottom: 8px;
+  }
+
+  select {
+      padding: 10px;
+      font-size: 16px;
+      width: 200px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      appearance: none;
+      background-color: white;
+      cursor: pointer;
+  }
+
+  select::after {
+      content: '\25BC';
+      position: absolute;
+      top: 50%;
+      right: 10px;
+      transform: translateY(-50%);
+      pointer-events: none;
+  }
+
+  option {
+      background-color: #fff;
+      color: #333;
+  }
+
+  </style>
+  <body>
+    
+    <nav>
+        <a href="./index.html">Home</a>
+        <a href="./product.html">Products</a>
+        <a href="./cart.html">Cart</a>
+      </nav>
+
+    <h3>Available products</h3>
+
+    <ul>
+      <li>
+          <input type="checkbox" id="task1">
+          <label for="task1">Task 1</label>
+      </li>
+      <li>
+          <input type="checkbox" id="task2">
+          <label for="task2">Task 2</label>
+      </li>
+      <li>
+          <input type="checkbox" id="task3">
+          <label for="task3">Task 3</label>
+      </li>
+  </ul>
+  <p id="signature">Site created by Group 3: Yasin Elmi, Oluwatobiloba Ogunbi, Michael Thompson, Adam Orchard</p>	
+  </body>
+</html>
+
+

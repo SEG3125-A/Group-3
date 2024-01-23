@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Business website</title>
+  </head>
+  <style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 8px;
+    }
+
+    select {
+        padding: 10px;
+        font-size: 16px;
+        width: 200px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        appearance: none; /* Removes default arrow icon in some browsers */
+        background-color: white;
+        cursor: pointer;
+    }
+
+    /* Style the dropdown arrow icon */
+    select::after {
+        content: '\25BC'; /* Unicode character for down arrow */
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        transform: translateY(-50%);
+        pointer-events: none;
+    }
+
+    /* Style the options in the dropdown */
+    option {
+        background-color: #fff;
+        color: #333;
+    }
+
+    #signature {
+    text-align: right;
+    color: black;
+    font-style: italic;
+    font-size: 70%;
+   }
+</style>
+</head>
+  <body>
+    <nav>
+      <a href="./index.html">Home</a>
+      <a href="./product.html">Products</a>
+      <a href="./cart.html">Cart</a>
+    </nav>
+    <h4> Client Information </h4>
+    <h5><label for="dropdown">Please inform us of any dietary restrictons</menu></label></h5>
+    <select id="dropdown">
+        <option value="option1">Vegetarian</option>
+        <option value="option2">Gluten free</option>
+        <option value="option3">Lactose Intolerant</option>
+        <option value="option4">Other</option>
+    </select>
+    <p id="signature">Site created by Group 3: Yasin Elmi, Oluwatobiloba Ogunbi, Michael Thompson, Adam Orchard</p>	
+  </body>
+</html>

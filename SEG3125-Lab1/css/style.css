@@ -1,0 +1,57 @@
+html{
+	background-color: rgb(187, 187, 187);
+}
+
+h1{
+	font-size: 100px;
+	text-align: center;
+	text-decoration-color: #355E3B;
+	text-shadow: 5px 5px 5px black;
+}
+
+h2{
+	color: black;
+	font-weight: bold;
+}
+
+#text{
+	text-align: center;
+}
+
+#image{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 30%;
+}
+
+p{
+ color:white;
+}
+
+.question {
+	background-color: #355E3B;
+	color: white;
+	margin: 10px;
+	padding: 20px;
+  }
+  
+  /* Defining styling for a specific element type - large block buttons */
+  .block {
+	display: block;
+	width: 100%;
+	border: none;
+	background-color: #ffff66;  /* yellow */
+	padding: 14px 28px;
+	font-size: 16px;
+	cursor: pointer;
+	text-align: center;
+  }
+  
+  /* Defining styling for a specific element with an id */
+  #signature {
+	text-align: right;
+	color: black;
+	font-style: italic;
+	font-size: 70%;
+  }
