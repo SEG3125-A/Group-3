@@ -19,14 +19,16 @@
   <h3>Client Information</h3>
   <p>Tell us a bit about you.</p>
 	Choose a Category:
-	<input type="checkbox" value="Vegetarian" id="vegetarian" onchange="addToList(this.id)">
+  <form name="inputs">
+	<input type="checkbox" value="vegetarian" name="input">
   <label>Vegetarian</label>
-  <input type="checkbox" value="Gluten-free" id="glutenFree" onchange="addToList(this.id)">
+  <input type="checkbox" value="glutenFree" name="input">
   <label>Gluten-free</label>
-  <input type="checkbox" value="Organic" id="organic" onchange="populateListProductChoices(this.id, 'displayProduct')">
+  <input type="checkbox" value="organic" name="input">
   <label>Organic</label>
+  </form>
 
-  <button id="addCart" type="button" class="block" onclick="populateListProductChoices(INSERT_LIST_FROM_ADDTOLIST, 'displayProduct')"> Update </button>
+  <button id="addCart" type="button" class="block" onclick="populateListProductChoices('displayProduct')"> Update </button>
 
 	
 </div>
