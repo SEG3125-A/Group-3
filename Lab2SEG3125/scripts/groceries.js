@@ -94,31 +94,47 @@ var products = [
  */
 function restrictProducts(prod, restriction) {
     let product_names = [];
-    console.log(prod);
-    console.log(restriction);
     
 
 	for (let i=0; i<prod.length; i+=1) {
 
-        if(prod[i].isVegetarian && prod[i].isGlutenFree && prod[i].isOrganic && restriction.includes('vegetarian') && restriction.includes('glutenFree') && restriction.includes('organic')) {
+        if(restriction.includes('vegetarian') && restriction.includes('glutenFree') && restriction.includes('organic')){
+            if(prod[i].isVegetarian && prod[i].isGlutenFree && prod[i].isOrganic){
+                product_names.push(prod[i]);
+            }
+        }
+        else if(restriction.includes('vegetarian') && restriction.includes('glutenFree')){
+            if(prod[i].isVegetarian && prod[i].isGlutenFree){
+                product_names.push(prod[i]);
+            }
+        }
+        else if(restriction.includes('vegetarian') && restriction.includes('organic')){
+            if(prod[i].isVegetarian && prod[i].isOrganic){
+                product_names.push(prod[i]);
+            }
+        }
+        else if(restriction.includes('glutenFree') && restriction.includes('organic')){
+            if(prod[i].isOrganic && prod[i].isGlutenFree){
+                product_names.push(prod[i]);
+            }
+        }
+        else if(prod[i].isVegetarian && restriction.includes('vegetarian')) {
             product_names.push(prod[i]);
-        } else if(prod[i].isVegetarian && prod[i].isGlutenFree && restriction.includes('vegetarian') && restriction.includes('glutenFree')) {
-            product_names.push(prod[i]);
-        } else if(prod[i].isVegetarian && prod[i].isOrganic && restriction.includes('vegetarian') && restriction.includes('organic')) {
-            product_names.push(prod[i]);
-        } else if(prod[i].isOrganic && prod[i].isGlutenFree && restriction.includes('glutenFree') && restriction.includes('organic')) {
-            product_names.push(prod[i]);
-        } else if(prod[i].isVegetarian && restriction.includes('vegetarian')) {
-            product_names.push(prod[i]);
+            console.log("huh4");
         } else if(prod[i].isGlutenFree && restriction.includes('glutenFree')) {
             product_names.push(prod[i]);
+            console.log("huh5");
         } else if(prod[i].isOrganic && restriction.includes('organic')) {
             product_names.push(prod[i]);
+            console.log("huh6");
         } else if(restriction.includes('none')) {
             product_names.push(prod[i]);
+            console.log("huh7");
         }
+
         
 	}
+    
 	return product_names;
 }
 

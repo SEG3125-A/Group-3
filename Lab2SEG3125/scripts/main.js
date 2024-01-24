@@ -32,7 +32,7 @@ function openInfo(evt, tabName) {
 function populateListProductChoices(slct2) {
 
 	var inputs = [];
-	var cbs = document.forms['inputs'].elements['input'];
+	var cbs = document.forms['inputs'].elements['i'];
 	for(var i=0,cbLen=cbs.length;i<cbLen;i++){
   		if(cbs[i].checked){
     		inputs.push(cbs[i].value);
@@ -60,13 +60,14 @@ function populateListProductChoices(slct2) {
 		var checkbox = document.createElement("input");
 		checkbox.type = "checkbox";
 		checkbox.name = "product";
-		checkbox.value = productName;
+		checkbox.price = productName.price;
+		checkbox.value = productName.name;
 		s2.appendChild(checkbox);
 		
 		// create a label for the checkbox, and also add in HTML DOM
 		var label = document.createElement('label')
-		label.htmlFor = productName;
-		label.appendChild(document.createTextNode(productName));
+		label.htmlFor = productName.name;
+		label.appendChild(document.createTextNode(productName.name));
 		s2.appendChild(label);
 		
 		
@@ -83,6 +84,8 @@ function selectedItems(){
 	
 	var ele = document.getElementsByName("product");
 	var chosenProducts = [];
+
+	
 	
 	var c = document.getElementById('displayCart');
 	c.innerHTML = "";
@@ -95,10 +98,11 @@ function selectedItems(){
 		if (ele[i].checked) {
 			para.appendChild(document.createTextNode(ele[i].value));
 			para.appendChild(document.createElement("br"));
-			chosenProducts.push(ele[i].value);
+			chosenProducts.push(ele[i]);
 		}
 	}
-		
+	
+	console.log(chosenProducts);
 	// add paragraph and total price
 	c.appendChild(para);
 	c.appendChild(document.createTextNode("Total Price is " + calcTotal(chosenProducts)));
