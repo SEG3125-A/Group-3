@@ -34,7 +34,8 @@ function populateListProductChoices(slct1, slct2) {
     s2.innerHTML = "";
 		
 	// obtain a reduced list of products based on restrictions
-    var optionArray = restrictListProducts(products, s1.value);
+    var optionArray = restrictProducts(products, s1.value);
+	console.log(optionArray);
 
 	// for each item in the array, create a checkbox element, each containing information such as:
 	// <input type="checkbox" name="product" value="Bread">
@@ -56,11 +57,12 @@ function populateListProductChoices(slct1, slct2) {
 		label.appendChild(document.createTextNode(productName));
 		s2.appendChild(label);
 		
+		
 		// create a breakline node and add in HTML DOM
 		s2.appendChild(document.createElement("br"));    
 	}
 }
-	
+
 // This function is called when the "Add selected items to cart" button in clicked
 // The purpose is to build the HTML to be displayed (a Paragraph) 
 // We build a paragraph to contain the list of selected items, and the total price

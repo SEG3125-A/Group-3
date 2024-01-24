@@ -1,0 +1,31 @@
+
+
+#signature {
+    text-align: right;
+    color: black;
+    font-style: italic;
+    font-size: 70%;
+}
+
+.nav-list
+{
+background-color: #CCCCCC;
+border-top: 1px solid #000000;
+border-bottom: 1px solid #000000;
+}
+
+.nav-list-item
+{
+background-color: #EFEFEF;
+border-right: 1px solid #000000;
+}
+
+.nav-list-item a
+{
+text-decoration: none;
+color: #000000;
+font-family: Arial, sans-serif;
+font-size: medium;
+font-weight: bold;
+letter-spacing: 1px;
+}

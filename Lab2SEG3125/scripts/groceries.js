@@ -94,6 +94,9 @@ var products = [
  */
 function restrictProducts(prod, restriction) {
     let product_names = [];
+    console.log(prod);
+    console.log(restriction);
+    
 
 	for (let i=0; i<prod.length; i+=1) {
 
@@ -114,6 +117,7 @@ function restrictProducts(prod, restriction) {
         } else if(restriction.includes('none')) {
             product_names.push(prod[i]);
         }
+        
 	}
 	return product_names;
 }
