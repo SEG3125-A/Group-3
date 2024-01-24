@@ -104,3 +104,4 @@ function selectedItems(){
 	c.appendChild(document.createTextNode("Total Price is " + calcTotal(chosenProducts)));
 		
 }
+
