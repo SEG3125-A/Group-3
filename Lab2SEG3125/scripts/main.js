@@ -93,14 +93,3 @@ function selectedItems(){
 		
 }
 
-function calcTotal(chosenProducts) {
-	var total = 0;
-	for (i = 0; i < chosenProducts.length; i++) {
-		for (j = 0; j < products.length; j++) {
-			if (chosenProducts[i] == products[j].name) {
-				total += products[j].price;
-			}
-		}
-	}
-	return total;
-}
