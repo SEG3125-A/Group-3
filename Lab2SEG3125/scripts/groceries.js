@@ -95,7 +95,9 @@ var products = [
 function restrictProducts(prod, restriction) {
     let product_names = [];
     
-
+    if(restriction.length == 0) {
+        return prod;
+    }
 	for (let i=0; i<prod.length; i+=1) {
 
         if(restriction.includes('vegetarian') && restriction.includes('glutenFree') && restriction.includes('organic')){
