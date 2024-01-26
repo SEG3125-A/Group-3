@@ -153,3 +153,14 @@ function calcTotal(prod) {
 
     return total;
 }
+
+// Sorting funciton for price of objects
+function compare(a,b) {
+    if(a.price < b.price) {
+        return -1;
+    }
+    if(a.price > b.price) {
+        return 1;
+    }
+    return 0;
+}
