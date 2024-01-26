@@ -53,7 +53,7 @@ function populateListProductChoices(slct2) {
 		
 	// obtain a reduced list of products based on restrictions
     var optionArray = restrictProducts(products, inputs);
-
+	optionArray.sort(compare);
 
 	// for each item in the array, create a checkbox element, each containing information such as:
 	// <input type="checkbox" name="product" value="Bread">
@@ -73,7 +73,7 @@ function populateListProductChoices(slct2) {
 		// create a label for the checkbox, and also add in HTML DOM
 		var label = document.createElement('label')
 		label.htmlFor = productName.name;
-		label.appendChild(document.createTextNode(productName.name));
+		label.appendChild(document.createTextNode(productName.name + ' - $' + productName.price));
 		s2.appendChild(label);
 		
 		
