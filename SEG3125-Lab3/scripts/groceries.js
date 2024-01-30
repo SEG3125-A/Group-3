@@ -6,6 +6,10 @@ var products = [
         isVegetarian: true,
         isGlutenFree: true,
         isOrganic: true,
+        isProtein: false,
+        isGrain: false,
+        isVegetable: true,
+        image: "./images/carrot.png",
         price: 2.99
     },
     {
@@ -13,6 +17,10 @@ var products = [
         isVegetarian: true,
         isGlutenFree: true,
         isOrganic: true,
+        isProtein: false,
+        isGrain: false,
+        isVegetable: true,
+        image: "./images/greenpepper.png",
         price: 2.99
     },
     {
@@ -20,6 +28,10 @@ var products = [
         isVegetarian: true,
         isGlutenFree: true,
         isOrganic: true,
+        isProtein: false,
+        isGrain: false,
+        isVegetable: true,
+        image: "./images/cucumber.png",
         price: 3.99
     },
     {
@@ -27,6 +39,10 @@ var products = [
         isVegetarian: true,
         isGlutenFree: false,
         isOrganic: true,
+        isProtein: false,
+        isGrain: true,
+        isVegetable: false,
+        image: "./images/bread.png",
         price: 4.99
     },
     {
@@ -34,6 +50,10 @@ var products = [
         isVegetarian: true,
         isGlutenFree: false,
         isOrganic: false,
+        isProtein: false,
+        isGrain: true,
+        isVegetable: false,
+        image: "./images/cracker.png",
         price: 5.99
     },
     {
@@ -41,6 +61,10 @@ var products = [
         isVegetarian: true,
         isGlutenFree: false,
         isOrganic: false,
+        isProtein: false,
+        isGrain: true,
+        isVegetable: false,
+        image: "./images/rice.png",
         price: 4.99
     },
     {
@@ -48,6 +72,10 @@ var products = [
         isVegetarian: true,
         isGlutenFree: true,
         isOrganic: true,
+        isProtein: true,
+        isGrain: false,
+        isVegetable: false,
+        image: "./images/eggs.png",
         price: 6.99
     },
     {
@@ -55,6 +83,10 @@ var products = [
         isVegetarian: true,
         isGlutenFree: false,
         isOrganic: true,
+        isProtein: false,
+        isGrain: false,
+        isVegetable: true,
+        image: "./images/flour.png",
         price: 5.99
     },
     {
@@ -62,6 +94,10 @@ var products = [
         isVegetarian: false,
         isGlutenFree: true,
         isOrganic: true,
+        isProtein: true,
+        isGrain: false,
+        isVegetable: false,
+        image: "./images/chicken.png",
         price: 8.99
     },
     {
@@ -69,6 +105,10 @@ var products = [
         isVegetarian: false,
         isGlutenFree: true,
         isOrganic: true,
+        isProtein: true,
+        isGrain: false,
+        isVegetable: false,
+        image: "./images/beef.png",
         price: 10.99
     },
     {
@@ -76,6 +116,10 @@ var products = [
         isVegetarian: false,
         isGlutenFree: true,
         isOrganic: true,
+        isProtein: true,
+        isGrain: false,
+        isVegetable: false,
+        image: "./images/salmon.png",
         price: 9.99
     },
     {
@@ -83,6 +127,10 @@ var products = [
         isVegetarian: true,
         isGlutenFree: false,
         isOrganic: false,
+        isProtein: false,
+        isGrain: true,
+        isVegetable: false,
+        image: "./images/noodles.png",
         price: 2.99
     }
 ]

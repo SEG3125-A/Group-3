@@ -65,17 +65,31 @@ function populateListProductChoices(slct2) {
 	// for each item in the array, create a checkbox element, each containing information such as:
 	// <input type="checkbox" name="product" value="Bread">
 	// <label for="Bread">Bread/label><br>
-		
+
 	for (i = 0; i < optionArray.length; i++) {
 			
 		var productName = optionArray[i];
+		if(productName.isProtein){
+			s2 = document.getElementById("protein");	
+		}
+		else if(productName.isGrain){
+			s2 = document.getElementById("grain");	
+		}
+		else if(productName.isVegetable){
+			s2 = document.getElementById("vegetable");	
+		}
 		// create the checkbox and add in HTML DOM
 		var checkbox = document.createElement("input");
+		var img = document.createElement("img");
 		checkbox.type = "checkbox";
 		checkbox.name = "product";
 		checkbox.price = productName.price;
 		checkbox.value = productName.name;
+		img.src = productName.image;
+		img.height = 50;
+		img.width = 50;
 		s2.appendChild(checkbox);
+		s2.appendChild(img);
 		
 		// create a label for the checkbox, and also add in HTML DOM
 		var label = document.createElement('label')
