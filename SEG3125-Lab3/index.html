@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<! This style sheet is taken from  https://www.w3schools.com/howto/howto_js_tabs.asp>
+	<link href="css/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<h1>Group 3 Store</h1>
+<!-- Tab links, each one with an onclick event associated with it -->
+<div class="tab">
+  <button class="tablinks" onclick="openInfo(event, 'Client')">Client</button>
+  <button class="tablinks" onclick="openInfo(event, 'Products')">Products</button>
+  <button class="tablinks" onclick="openInfo(event, 'Cart')">Cart</button>
+</div>
+
+<!-- Tab content -->
+<div id="Client" class="tabcontent">
+  <h3>Client Information</h3>
+  <p>Tell us a bit about you.</p>
+	Choose a Category:
+  <form name="inputs">
+	<input type="checkbox" value="vegetarian" name="i">
+  <label>Vegetarian</label>
+  <input type="checkbox" value="glutenFree" name="i">
+  <label>Gluten-free</label>
+  <input type="checkbox" value="organic" name="i">
+  <label>Organic</label>
+  </form>
+
+  <button id="addCart" type="button" class="block" onclick="populateListProductChoices('displayProduct')"> Update </button>
+
+	
+</div>
+
+<div id="Products" class="tabcontent">
+  <h3>Your targeted products</h3>
+  <p>We preselected products based on your restrictions.</p>
+	 Choose items to buy:
+	 <div id="displayProduct"></div>
+	 <button id="addCart" type="button" class="block" onclick="selectedItems()">
+		Add selected items to cart.
+	</button>
+</div>
+
+<div id="Cart" class="tabcontent">
+  <h3>Cart</h3>
+  <p>Here is your cart.</p>
+  <div id="displayCart"></div>
+</div>
+
+<script src="scripts/groceries.js"></script>
+<script src="scripts/main.js"></script>
+
+<p id="signature">Site created by Group 3: Yasin Elmi, Oluwatobiloba Ogunbi, Michael Thompson, Adam Orchard</p>	
+</body>
+</html>
