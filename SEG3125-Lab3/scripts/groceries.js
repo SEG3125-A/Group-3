@@ -92,7 +92,7 @@ var products = [
  * @param {*} prod List of products in inventory
  * @param {*} restriction List of restrictions detailed by user
  */
-function restrictProducts(prod, restriction) {
+function restrictProducts(prod, restriction, max) {
     let product_names = [];
     
     if(restriction.length == 0) {
@@ -133,11 +133,12 @@ function restrictProducts(prod, restriction) {
             product_names.push(prod[i]);
             console.log("huh7");
         }
-
+        //console.log(typeof(product_names[0]));
+        var priceAdjusted = product_names.filter(item => item.price <= max);
         
 	}
     
-	return product_names;
+	return priceAdjusted;
 }
 
 /**

@@ -30,6 +30,14 @@ function openInfo(evt, tabName) {
 
 }
 
+// Silly little code for the price slider
+var slider = document.getElementById("priceSlider");
+var price = document.getElementById("price");
+price.innerHTML = slider.value;
+slider.oninput = function() {
+	price.innerHTML = this.value;
+}
+
 
 	
 // generate a checkbox list from a list of products
@@ -45,14 +53,13 @@ function populateListProductChoices(slct2) {
   	} 
 	}
 
-
     var s2 = document.getElementById(slct2);
 	
 	// s2 represents the <div> in the Products tab, which shows the product list, so we first set it empty
     s2.innerHTML = "";
 		
 	// obtain a reduced list of products based on restrictions
-    var optionArray = restrictProducts(products, inputs);
+    var optionArray = restrictProducts(products, inputs, slider.value);
 	optionArray.sort(compare);
 
 	// for each item in the array, create a checkbox element, each containing information such as:
