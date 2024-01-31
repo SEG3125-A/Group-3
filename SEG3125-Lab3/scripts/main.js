@@ -30,6 +30,14 @@ function openInfo(evt, tabName) {
 
 }
 
+// Silly little code for the price slider
+var slider = document.getElementById("priceSlider");
+var price = document.getElementById("price");
+price.innerHTML = slider.value;
+slider.oninput = function() {
+	price.innerHTML = this.value;
+}
+
 
 	
 // generate a checkbox list from a list of products
@@ -45,30 +53,43 @@ function populateListProductChoices(slct2) {
   	} 
 	}
 
-
     var s2 = document.getElementById(slct2);
 	
 	// s2 represents the <div> in the Products tab, which shows the product list, so we first set it empty
     s2.innerHTML = "";
 		
 	// obtain a reduced list of products based on restrictions
-    var optionArray = restrictProducts(products, inputs);
+    var optionArray = restrictProducts(products, inputs, slider.value);
 	optionArray.sort(compare);
 
 	// for each item in the array, create a checkbox element, each containing information such as:
 	// <input type="checkbox" name="product" value="Bread">
 	// <label for="Bread">Bread/label><br>
-		
+
 	for (i = 0; i < optionArray.length; i++) {
 			
 		var productName = optionArray[i];
+		if(productName.isProtein){
+			s2 = document.getElementById("protein");	
+		}
+		else if(productName.isGrain){
+			s2 = document.getElementById("grain");	
+		}
+		else if(productName.isVegetable){
+			s2 = document.getElementById("vegetable");	
+		}
 		// create the checkbox and add in HTML DOM
 		var checkbox = document.createElement("input");
+		var img = document.createElement("img");
 		checkbox.type = "checkbox";
 		checkbox.name = "product";
 		checkbox.price = productName.price;
 		checkbox.value = productName.name;
+		img.src = productName.image;
+		img.height = 50;
+		img.width = 50;
 		s2.appendChild(checkbox);
+		s2.appendChild(img);
 		
 		// create a label for the checkbox, and also add in HTML DOM
 		var label = document.createElement('label')

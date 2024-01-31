@@ -29,3 +29,44 @@ font-size: medium;
 font-weight: bold;
 letter-spacing: 1px;
 }
+
+.priceSlider 
+{
+    -webkit-appearance: none;  
+    appearance: none;
+    width: 25%; 
+    height: 10px; 
+    background: #d3d3d3; 
+    outline: none; 
+    opacity: 0.7; 
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.priceSlider::-webkit-slider-thumb 
+{
+    -webkit-appearance: none; 
+    appearance: none;
+    width: 25px; 
+    height: 25px; 
+    background-image: url('/SEG3125-Lab3/images/dollar-symbol.png');
+    /*background-size: contain;
+    background-position: center center;*/
+    cursor: pointer; 
+}
+
+/* michael does dev on firefox LOOOOOOl */
+.priceSlider::-moz-range-thumb 
+{
+    width: 25px; 
+    height: 25px; 
+    background-image: url('/SEG3125-Lab3/images/dollar-symbol.png'); 
+    /*background-size: contain;
+    background-position: center center;*/
+    cursor: pointer; 
+}
+
+.priceSlider:hover
+{
+    opacity: 1;
+}

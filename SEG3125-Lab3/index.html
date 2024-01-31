@@ -18,16 +18,25 @@
 <div id="Client" class="tabcontent">
   <h3>Client Information</h3>
   <p>Tell us a bit about you.</p>
-	Choose a Category:
-  <form name="inputs">
-	<input type="checkbox" value="vegetarian" name="i">
-  <label>Vegetarian</label>
-  <input type="checkbox" value="glutenFree" name="i">
-  <label>Gluten-free</label>
-  <input type="checkbox" value="organic" name="i">
-  <label>Organic</label>
-  </form>
+  <div id="DietRestriction" clas="ClientInfo">
+    Choose a Category:
+    <form name="inputs">
+    <input type="checkbox" value="vegetarian" name="i">
+    <label>Vegetarian</label>
+    <input type="checkbox" value="glutenFree" name="i">
+    <label>Gluten-free</label>
+    <input type="checkbox" value="organic" name="i">
+    <label>Organic</label>
+    </form>
+  </div>
+  <br>
+  <div id="priceRange" class="clientInfo">
+    Specify a Maximum Price per Item:
+    <br>
+    <input type="range" min="0" max="125" value="75" class="priceSlider" id="priceSlider">
+    <span id="price"></span>
 
+  </div>
   <button id="addCart" type="button" class="block" onclick="populateListProductChoices('displayProduct')"> Update </button>
 
 	
@@ -42,6 +51,9 @@
   <p>We preselected products based on your restrictions.</p>
 	 Choose items to buy:
 	 <div id="displayProduct"></div>
+   <div id="grain"><strong>Grain products</strong><br></div>
+   <div id="vegetable"><strong>Vegetable/Fruits products</strong><br></div>
+   <div id="protein"><strong>Protein products</strong><br></div>
 	 <button id="addCart" type="button" class="block" onclick="selectedItems()">
 		Add selected items to cart.
 	</button>
@@ -49,7 +61,7 @@
 
 <div id="Cart" class="tabcontent">
   <h3>Cart</h3>
-  <p>Here is your cart.</p>
+  <p>Your current cart.</p>
   <div id="displayCart"></div>
 </div>
 
