@@ -46,10 +46,10 @@ letter-spacing: 1px;
 .priceSlider::-webkit-slider-thumb 
 {
     -webkit-appearance: none; 
-    appearance: none;
+    appearance: auto;
     width: 25px; 
     height: 25px; 
-    background-image: url('/SEG3125-Lab3/images/dollar-symbol.png');
+    background-image: url(../images/dollar-symbol.jpeg);
     /*background-size: contain;
     background-position: center center;*/
     cursor: pointer; 
@@ -60,7 +60,7 @@ letter-spacing: 1px;
 {
     width: 25px; 
     height: 25px; 
-    background-image: url('/SEG3125-Lab3/images/dollar-symbol.png'); 
+    background-image: url(../images/dollar-symbol.jpeg); 
     /*background-size: contain;
     background-position: center center;*/
     cursor: pointer; 
