@@ -57,7 +57,15 @@ function populateListProductChoices(slct2) {
 	
 	// s2 represents the <div> in the Products tab, which shows the product list, so we first set it empty
     s2.innerHTML = "";
-		
+	
+	var grain = document.getElementById("grain");
+	var veggie = document.getElementById("vegetable");
+	var protein = document.getElementById("protein");
+
+	grain.innerHTML = "";
+	veggie.innerHTML = "";
+	protein.innerHTML = "";
+	
 	// obtain a reduced list of products based on restrictions
     var optionArray = restrictProducts(products, inputs, slider.value);
 	optionArray.sort(compare);
