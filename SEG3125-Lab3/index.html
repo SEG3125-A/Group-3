@@ -9,9 +9,27 @@
 <h1>Group 3 Store</h1>
 <!-- Tab links, each one with an onclick event associated with it -->
 <div class="tab">
-  <button class="tablinks" onclick="openInfo(event, 'Client')">Client</button>
-  <button class="tablinks" onclick="openInfo(event, 'Products')">Products</button>
-  <button class="tablinks" onclick="openInfo(event, 'Cart')">Cart</button>
+  <ul>
+    <li>
+        <a href="#" class="active">
+            <i class="fas fa-home icon"></i>
+            <button class="tablinks" onclick="openInfo(event, 'Client')">Client</button>
+        </a>
+    </li>
+    <li><a href="#">
+            <i class="fas fa-rss icon"></i>
+            <button class="tablinks" onclick="openInfo(event, 'Products')">Products</button>
+        </a>
+    </li>
+    <li><a href="#">
+            <i class="fas fa-address-book icon"></i>
+            <button class="tablinks" onclick="openInfo(event, 'Cart')">Cart</button>
+        </a>
+    </li>
+</ul>
+  
+  
+  
 </div>
 
 <!-- Tab content -->
