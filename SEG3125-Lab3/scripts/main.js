@@ -103,6 +103,25 @@ function populateListProductChoices(slct2) {
 	}
 }
 
+// This function helps search for specific products from the list provided in groceries.js
+function search(){
+	var input, filter, ul, li, a, i, txtValue;
+	input = document.getElementById("search");
+	filter = input.value.toUpperCase();
+	ul = document.getElementById("products");
+	li = ul.getElementsByTagName("li");
+	for (i = 0; i < li.length; i++) {
+	  a = li[i].getElementsByTagName("a")[0];
+	  txtValue = a.textContent || a.innerText;
+	  if (txtValue.toUpperCase().indexOf(filter) > -1) {
+		li[i].style.display = "";
+	  } else {
+		li[i].style.display = "none";
+	  }
+	}
+}
+
+
 // This function is called when the "Add selected items to cart" button in clicked
 // The purpose is to build the HTML to be displayed (a Paragraph) 
 // We build a paragraph to contain the list of selected items, and the total price
@@ -111,8 +130,6 @@ function selectedItems(){
 	
 	var ele = document.getElementsByName("product");
 	var chosenProducts = [];
-
-	
 	
 	var c = document.getElementById('displayCart');
 	c.innerHTML = "";
