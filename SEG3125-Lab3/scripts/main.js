@@ -40,6 +40,15 @@ slider.oninput = function() {
 	price.innerHTML = this.value;
 }
 
+// Silly code for collapsible
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for(i=0; i < coll.length; i++) {
+	coll[i].addEventListener("click", function() {
+		this.classList.toggle("active");
+	});
+}
 
 	
 // generate a checkbox list from a list of products
@@ -88,6 +97,7 @@ function populateListProductChoices(slct2) {
 		else if(productName.isVegetable){
 			s2 = document.getElementById("vegetable");	
 		}
+
 		// create the checkbox and add in HTML DOM
 		var checkbox = document.createElement("input");
 		var img = document.createElement("img");
@@ -107,7 +117,7 @@ function populateListProductChoices(slct2) {
 		label.appendChild(document.createTextNode(productName.name + ' - $' + productName.price));
 		s2.appendChild(label);
 		
-		
+		s2.appendChild(label);
 		// create a breakline node and add in HTML DOM
 		s2.appendChild(document.createElement("br"));    
 	}
@@ -143,11 +153,14 @@ function selectedItems(){
 	
 	var c = document.getElementById('displayCart');
 	c.innerHTML = "";
+
+	var total = document.getElementById('totalPrice');
 	
 	// build list of selected item
 	var para = document.createElement("P");
-	para.innerHTML = "You selected : ";
+	para.setAttribute("id","cartItems");
 	para.appendChild(document.createElement("br"));
+
 	for (i = 0; i < ele.length; i++) { 
 		if (ele[i].checked) {
 			para.appendChild(document.createTextNode(ele[i].value));
@@ -156,10 +169,11 @@ function selectedItems(){
 		}
 	}
 	
+	total.innerHTML = "Total Price - $" + calcTotal(chosenProducts);
 	console.log(chosenProducts);
 	// add paragraph and total price
 	c.appendChild(para);
-	c.appendChild(document.createTextNode("Total Price is " + calcTotal(chosenProducts)));
+	//total.appendChild();
 		
 }
 
