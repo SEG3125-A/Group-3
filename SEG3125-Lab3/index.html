@@ -9,86 +9,106 @@
 <h1>Group 3 Store</h1>
 <!-- Tab links, each one with an onclick event associated with it -->
 <div class="tab">
+  <button class="tablinks active" onclick="openInfo(event, 'Client')">Client</button>
+  <button class="tablinks" onclick="openInfo(event, 'Products')">Products</button>
+  <button class="tablinks" onclick="openInfo(event, 'Cart')">Cart</button>
+  <!--
   <ul>
     <li>
-        <a href="#" class="active">
-            <i class="fas fa-home icon"></i>
-            <button class="tablinks" onclick="openInfo(event, 'Client')">Client</button>
-        </a>
+      <a href="#">
+        <i class="fas fa-home icon"></i>
+        <button class="tablinks active" onclick="openInfo(event, 'Client')">Client</button>
+      </a>
     </li>
-    <li><a href="#">
-            <i class="fas fa-rss icon"></i>
-            <button class="tablinks" onclick="openInfo(event, 'Products')">Products</button>
-        </a>
+    <li>
+      <a href="#">
+        <i class="fas fa-rss icon"></i>
+        <button class="tablinks" onclick="openInfo(event, 'Products')">Products</button>
+      </a>
     </li>
-    <li><a href="#">
-            <i class="fas fa-address-book icon"></i>
-            <button class="tablinks" onclick="openInfo(event, 'Cart')">Cart</button>
-        </a>
+    <li>
+      <a href="#">
+        <i class="fas fa-address-book icon"></i>
+       <button class="tablinks" onclick="openInfo(event, 'Cart')">Cart</button>
+      </a>
     </li>
 </ul>
-  
+-->
   
   
 </div>
 
 <!-- Tab content -->
 <div id="Client" class="tabcontent">
-  <h3>Client Information</h3>
-  <p>Tell us a bit about you.</p>
-  <div id="DietRestriction" clas="ClientInfo">
-    Choose a Category:
+  <h2>Client Information</h2>
+  <h3>Tell us a bit about yourself!</h3>
+  <div id="DietRestriction" class="ClientInfo">
+    <h4>Select any Dietary Restriction(s)</h4>
     <form name="inputs">
-    <input type="checkbox" value="vegetarian" name="i">
-    <label>Vegetarian</label>
-    <input type="checkbox" value="glutenFree" name="i">
-    <label>Gluten-free</label>
-    <input type="checkbox" value="organic" name="i">
-    <label>Organic</label>
+
+      <label class="container">Vegetarian
+        <input type="checkbox" value="vegetarian" name="i" onclick="populateListProductChoices('displayProduct')">
+        <span class="checkmark"></span>
+      </label>
+
+      <label class="container">Gluten-free
+        <input type="checkbox" value="glutenFree" name="i" onclick="populateListProductChoices('displayProduct')">
+        <span class="checkmark"></span>
+      </label>
+
+      <label class="container">Organic
+        <input type="checkbox" value="organic" name="i" onclick="populateListProductChoices('displayProduct')">
+        <span class="checkmark"></span>
+      </label>
+
     </form>
   </div>
   <br>
   <div id="priceRange" class="clientInfo">
-    Specify a Maximum Price per Item:
+    <h4>Specify a Price Range on Item: </h4>
     <br>
-    <input type="range" min="0" max="125" value="75" class="priceSlider" id="priceSlider">
+    <input type="range" min="0" max="125" value="75" class="priceSlider" id="priceSlider" onclick="populateListProductChoices('displayProduct')">
     <span id="price"></span>
 
   </div>
-  <button id="addCart" type="button" class="block" onclick="populateListProductChoices('displayProduct')"> Update </button>
-
-	
 </div>
 
 <div id="Products" class="tabcontent">
   <!--Adding search bar-->
-  <h3>Your targeted products</h3>
+  <h2>Your targeted products</h2>
   <!-- <h4>Search for a product here</h4>
   <input type="text" id="myInput" onkeyup="search()" placeholder="Search for products.." title="Type in a name">
   <br> -->
-  <p>We preselected products based on your restrictions.</p>
-	 Choose items to buy:
+  <h3>We preselected products based on your restrictions!</h3>
 	 <div id="displayProduct"></div>
-   <button onclick="hide('grain')" id="grain_button">Hide/Show Grain Products</button>
-   <div id="grain"><strong>Grain products</strong><br></div>
-   <button onclick="hide('vegetable')" id="vegetable_button">Hide/Show Vegetable products</button>
-   <div id="vegetable"><strong>Vegetable/Fruits products</strong><br></div>
-   <button onclick="hide('protein')" id="protein_button">Hide/Show Protein Products</button>
-   <div id="protein"><strong>Protein products</strong><br></div>
-	 <button id="addCart" type="button" class="block" onclick="selectedItems()">
-		Add selected items to cart.
+
+    <button onclick="hide('grain')" id="grain_button" class="collapsible">Grain Products</button>
+    <span id="grain"><strong></strong><br></span>
+
+    <button onclick="hide('vegetable')" id="vegetable_button" class="collapsible">Vegetable products</button>
+    <span id="vegetable"><strong></strong><br></span>
+
+    <button onclick="hide('protein')" id="protein_button" class="collapsible">Protein Products</button>
+    <span id="protein"><strong></strong><br></span>
+
+    <br>
+    <br>
+    <button id="addCart" type="button" class="block" onclick="selectedItems()">
+      Add selected items to cart.
 	</button>
 </div>
 
 <div id="Cart" class="tabcontent">
-  <h3>Cart</h3>
-  <p>Your current cart.</p>
-  <div id="displayCart"></div>
+  <h2>Cart</h2>
+
+  <span id="displayCart"></span>
+  <h3 id="totalPrice"></h3>
+
 </div>
 
 <script src="scripts/groceries.js"></script>
 <script src="scripts/main.js"></script>
-
+<br>
 <p id="signature">Site created by Group 3: Yasin Elmi, Oluwatobiloba Ogunbi, Michael Thompson, Adam Orchard</p>	
 </body>
 </html>

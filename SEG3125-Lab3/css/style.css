@@ -1,4 +1,6 @@
-
+body{
+  background-color: #95B9C7;
+}
 
 #signature {
     text-align: right;
@@ -35,7 +37,8 @@ letter-spacing: 1px;
     -webkit-appearance: none;  
     appearance: none;
     width: 25%; 
-    height: 10px; 
+    height: 15px; 
+    border-radius: 5px;
     background: #d3d3d3; 
     outline: none; 
     opacity: 0.7; 
@@ -49,6 +52,7 @@ letter-spacing: 1px;
     appearance: auto;
     width: 25px; 
     height: 25px; 
+    border-radius: 50%;
     background-image: url(../images/dollar-symbol.jpeg);
     /*background-size: contain;
     background-position: center center;*/
@@ -60,6 +64,7 @@ letter-spacing: 1px;
 {
     width: 25px; 
     height: 25px; 
+    border-radius: 50%;
     background-image: url(../images/dollar-symbol.jpeg); 
     /*background-size: contain;
     background-position: center center;*/
@@ -71,7 +76,14 @@ letter-spacing: 1px;
     opacity: 1;
 }
 
-ul {
+#price
+{
+  font-family: Helvetica;
+  color: white;
+}
+
+ul 
+{
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -79,11 +91,13 @@ ul {
     background-color: gray;
   }
   
-  li {
+  li 
+  {
     float: left;
   }
   
-  li a {
+  li a 
+  {
     display: block;
     color: white;
     text-align: center;
@@ -92,6 +106,198 @@ ul {
   }
   
   /* Change the link color to #111 (black) on hover */
-  li a:hover {
+  li a:hover 
+  {
     background-color: #111;
   }
+
+  .tab
+  {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #C7A395;
+    text-align: center;
+  }
+
+.tab button {
+  background-color: inherit;
+  margin: 0;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.2s;
+  font-family: Helvetica;
+  font-size: 24px;
+  color: white;
+}
+
+.tab button:hover
+{
+  background-color: #9F7B6D;
+}
+
+.tab button.active {
+  background-color: #E5C1B3;
+}
+
+.collapsible 
+{
+  background-color: #EEE;
+  color: #444;
+  padding: 20px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 18px;
+  font-family: Helvetica;
+  color: white;
+  background-color: #C7A395;
+}
+
+.collapsible:hover 
+{
+  background-color: #CCC;
+}
+
+.collapsible:after{
+  content: '\02795';
+}
+
+.collapsible.active:after {
+  content: "\2796";
+}
+
+h1{
+  color: white;
+  font-family: Helvetica;
+  position: relative center;
+  text-align: center;
+}
+
+h2{
+  color: white;
+  font-family: Helvetica;
+  position: relative center;
+  text-align: center;
+}
+
+h3{
+  color: white;
+  font-family: Helvetica;
+  position: relative center;
+  text-align: center;
+}
+
+h4 {
+  color: white;
+  font-family: Helvetica;
+  position: relative center;
+}
+
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: Helvetica;
+  color: white;
+}
+
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee
+}
+
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+.container input:checked ~ .checkmark {
+  background-color: #597D8B;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+#signature {
+  font-family: Helvetica;
+  color: white;
+}
+
+#grain, #vegetable, #protein {
+  font-family: Helvetica;
+  color: white;
+  font-size: 16px;
+}
+
+#addCart {
+  background-color: #C7A395;
+  margin: 0;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 10px 14px;
+  transition: 0.2s;
+  font-family: Helvetica;
+  font-size: 16px;
+  color: white;
+  position: relative center;
+  text-align: center;
+}
+
+#addCart:hover
+{
+  background-color: #9F7B6D;
+}
+
+#displayCart {
+  font-family: Helvetica;
+  color: white;
+  font-size: 16px;
+  position: relative center;
+  text-align: center;
+}
+
+#cartItems {
+  font-family: Helvetica;
+  color: white;
+  font-size: 16px;
+  text-align: center;
+}
