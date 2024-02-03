@@ -7,6 +7,7 @@ window.onload = function(){
         tabcontent[i].style.display = "none";
     }
     document.getElementById("Client").style.display = "block";
+	populateListProductChoices('displayProduct')
 }
 
 
@@ -20,14 +21,15 @@ function openInfo(evt, tabName) {
 
 	// Get all elements with class="tablinks" and remove the class "active"
 	tablinks = document.getElementsByClassName("tablinks");
+	console.log(tablinks);
+
 	for (i = 0; i < tablinks.length; i++) {
 		tablinks[i].className = tablinks[i].className.replace(" active", "");
 	}
-
+	
 	// Show the current tab, and add an "active" class to the button that opened the tab
 	document.getElementById(tabName).style.display = "block";
 	evt.currentTarget.className += " active";
-
 }
 
 // Silly little code for the price slider
@@ -44,7 +46,7 @@ slider.oninput = function() {
 // it makes each product name as the label for the checkbos
 
 function populateListProductChoices(slct2) {
-
+	console.log('test')
 	var inputs = [];
 	var cbs = document.forms['inputs'].elements['i'];
 	for(var i=0,cbLen=cbs.length;i<cbLen;i++){
@@ -56,7 +58,7 @@ function populateListProductChoices(slct2) {
     var s2 = document.getElementById(slct2);
 	
 	// s2 represents the <div> in the Products tab, which shows the product list, so we first set it empty
-    s2.innerHTML = "";
+    //s2.innerHTML = "";
 	
 	var grain = document.getElementById("grain");
 	var veggie = document.getElementById("vegetable");
@@ -65,7 +67,7 @@ function populateListProductChoices(slct2) {
 	grain.innerHTML = "";
 	veggie.innerHTML = "";
 	protein.innerHTML = "";
-	
+
 	// obtain a reduced list of products based on restrictions
     var optionArray = restrictProducts(products, inputs, slider.value);
 	optionArray.sort(compare);

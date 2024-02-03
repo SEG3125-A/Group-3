@@ -71,7 +71,8 @@ letter-spacing: 1px;
     opacity: 1;
 }
 
-ul {
+ul 
+{
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -79,11 +80,13 @@ ul {
     background-color: gray;
   }
   
-  li {
+  li 
+  {
     float: left;
   }
   
-  li a {
+  li a 
+  {
     display: block;
     color: white;
     text-align: center;
@@ -92,6 +95,53 @@ ul {
   }
   
   /* Change the link color to #111 (black) on hover */
-  li a:hover {
+  li a:hover 
+  {
     background-color: #111;
   }
+
+  .tab
+  {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: gray;
+    text-align: center;
+  }
+
+.tab button {
+  background-color: inherit;
+  margin: 0;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.2s;
+}
+
+.tab button:hover
+{
+  background-color: #111;
+}
+
+.tab button.active {
+  background-color: #ccc;
+}
+
+.collapsible 
+{
+  background-color: #EEE;
+  color: #444;
+  padding: 20px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 24 px;
+}
+
+.active, .collapsible:hover 
+{
+  background-color: #CCC;
+}
+
