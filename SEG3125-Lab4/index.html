@@ -15,6 +15,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Big Boy Barbers</title>
 
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Licorice&family=Merriweather&family=Montserrat+Alternates&display=swap" rel="stylesheet">
+
     <!-- Style sheet (CSS) and JavaScript scripts necessary to use Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -35,16 +40,16 @@
     <!-- Use your own CSS file to change those fonts if they do not correspond to your company's look -->
     <div class="container-md p-3 my-3 border bg-dark text-white">
         <h1 class="text-center">Big Boy Barbers</h1>
-        <p class="text-center">We only cut hair for big boys</p>
+        <p class="text-center" id="slogan">We only cut hair for big boys</p>
     </div>
 
     <!-- Bootstrap contains a grid system you can explore https://www.w3schools.com/bootstrap4/bootstrap_grid_system.asp -->
     <!-- It can be useful for placement of information -->
     <div class="row p-3">
-        <div class="col-md-3 text-center">Service</div>
-        <div class="col-md-3 text-center">About us</div>
-        <div class="col-md-3 text-center">Our team</div>
-        <div class="col-md-3 text-center">Where to find us</div>
+        <div class="col-md-3 text-center text"> <a href="#AboutUs">About us</a> </div>
+        <div class="col-md-3 text-center text"> <a href="#service">Service</a></div>
+        <div class="col-md-3 text-center text"><a href="#team">Our team</a></div>
+        <div class="col-md-3 text-center text"><a href="#where">Where to find us</a></div>
     </div>
 
     <div class="container">
@@ -60,19 +65,19 @@
     </div>
 
     <!-- When you have messages to tell, remember that center align is not always the best choice -->
-    <div class="container-md p-3 my-3 border bg-light text-success">
+    <div class="container-md p-3 my-3 border bg-dark text-success" id="AboutUs">
         <h3>Let us tell you about our expertise</h3>
-        <p>We can <mark>cut hair</mark></p>
+        <p class="text">Here at Fine Grooming we offer high quality grooming services to meet all mens needs. We pride ourselves on going above and beyond the call of duty and ensure all customers leave highly satisfied. <br><br>
+        With an inclusive and respectful ambiance, you will feel at home  and enjoy the playful bantering amongst team members.<br> <br>
+        When you sit in our chair, not only will you receive distinctive grooming services, you will experience the highly sought after timeless barber-to-client relationship which we perpetuate.<br></p>
 
     </div>
 
-
     <!-- Bootstrap has different types of tables https://www.w3schools.com/bootstrap4/bootstrap_tables.asp -->
     <!-- Might be (or not) useful to show some information to the user -->
-    <div class="container">
-        <h2>Service description</h2>
-        <p>Here is a list of services offered</p>            
-        <table class="table table-primary table-hover">
+    <div class="container" id="service">
+        <h2>Services offered</h2>    
+        <table class="table table-primary table-hover table-dark">
             <thead>
             <tr>
                 <th>Service</th>
@@ -83,17 +88,17 @@
             <tbody>
             <tr>
                 <td>Full Haircut</td>
-                <td>Bla bla</td>
+                <td>REGULAR HAIRCUT/FADE HAIRCUT + BEARD TRIM</td>
                 <td>30$</td>
             </tr>
             <tr>
                 <td>Fade</td>
-                <td>Bla bla</td>
+                <td>AMAZING FADE HAIRCUT</td>
                 <td>15$</td>
             </tr>
             <tr>
                 <td>Beard Trim</td>
-                <td>Bla bla</td>
+                <td>EXQUISITE BEARD TRIM</td>
                 <td>10$</td>
             </tr>
             </tbody>
@@ -104,34 +109,41 @@
     <!-- https://www.w3schools.com/bootstrap4/bootstrap_collapse.asp -->
     <!-- As we want to do a vertical navigation better suited for mobile design, an accordion pattern -->
     <!-- could work well.  You can use other patterns too.  This is just an example. -->
-    <div class="container">
-        
+    <div class="container p-3 my-3">
         <div id="accordion">
-            <div class="card">
+            <div class="card text-white bg-dark mb-3">
                 <div class="card-header">
-                    <a class="card-link" data-toggle="collapse" href="#collapseService">Choose a service</a>
+                    <a class="card-link text-white" data-toggle="collapse" href="#collapseService">Choose a service</a>
                 </div>
                 <div id="collapseService" class="collapse show" data-parent="#accordion">
-                    <div class="card-body">
+                    <div class="card-body ">
                         <p>Here is our list of services</p>
                     </div>
                     <div class="row">
-                        <div class="col"></div>
-                            Full haircut 
-                            <img src="images/barber1.jpeg" alt="" width="200" height="200">
-                        <div class="col"></div>
-                            Fade
+                        <select name="haircuts" id="haircuts" multiple>
+                            <div class="col"> 
+                                <input type="checkbox" value="haircut">  Haircut<br> <br></input> 
+                                <img src="images/barber1.jpeg" alt="" width="200" height="200"> 
+                            </div>
+                            
+                        <div class="col">
+                            <input type="checkbox" value="Fade">  Fade<br></input>
                             <img src="images/barber2.jpeg" alt="" width="200" height="200">
-                        <div class="col"></div>
-                            Beard Trim
+                        </div>
+                            
+                        <div class="col">
+                            <input type="checkbox" value="BeardTrim">  Beard Trim<br></input>
                             <img src="images/barber3.jpeg" alt="" width="200" height="200">
-                      </div>
+                        </div>
+                        </select>
+                    </div>
+                        
+                        
                     
-
                 </div>
-            <div class="card">
+            <div class="card text-white bg-dark mb-3">
                 <div class="card-header">
-                    <a class="collapsed card-link" data-toggle="collapse" href="#collapseDate">Choose a date</a>
+                    <a class="collapsed card-link text-white" data-toggle="collapse" href="#collapseDate">Choose a date</a>
                 </div>
                 <div id="collapseDate" class="collapse" data-parent="#accordion">
                     <div class="card-body">
@@ -147,9 +159,9 @@
                     </div>
                 </div>
             </div>
-            <div class="card">
+            <div class="card text-white bg-dark mb-3">
                 <div class="card-header">
-                    <a class="collapsed card-link" data-toggle="collapse" href="#collapseClientInfo">Your info</a>
+                    <a class="collapsed card-link text-white" data-toggle="collapse" href="#collapseClientInfo">Your info</a>
                 </div>
                 <div id="collapseClientInfo" class="collapse" data-parent="#accordion">
                     <div class="card-body">
@@ -177,26 +189,29 @@
     <!-- Card columns allows multiple cards next to each other -->
     <!-- The first card's button doesn't go anywhere, it could be a modal --> 
     <!-- My second card limits the information seen and uses collapsible to show more -->
-    <div class="container p-3">
+    <div class="container p-3" id="team">
         <h2>Meet our hairdressers</h2>
         <div class="card-columns">
-            <div class="card bg-warning" style="width:200px">
-                <img class="card-img-top" src="images/Jule.jpg" alt="Card image" style="width:100%">
+            <div class="card bg-warning text-white bg-dark mb-3" style="width:200px">
+                <img class="card-img-top" src="images/steve.png" alt="Card image" style="width:100%">
                 <div class="card-body">
-                    <h4 class="card-title">Jules</h4>
-                    <p class="card-text">Jules has been cutting hair for 10 years.</p>
-                    <a href="#" class="btn btn-primary">See Profile</a>
+                    <h4 class="card-title">Steve</h4>
+                    <p class="card-text">Hair wizard.</p>
+                    <a href="#profile1" class="btn btn-primary" data-toggle="collapse">See Profile</a>
+                    <div id="profile1" class="collapse p-3">
+                        <p>Puts a spell on your hair</p>
+                    </div>
                 </div>
             </div>
-            <div class="card bg-danger" style="width:200px">
-                <img class="card-img-top" src="images/Jule.jpg" alt="Card image" style="width:100%">
+            <div class="card bg-danger text-white bg-dark mb-3" style="width:200px">
+                <img class="card-img-top" src="images/leon.png" alt="Card image" style="width:100%">
                 <div class="card-body">
-                    <h4 class="card-title">Jules</h4>
+                    <h4 class="card-title">Leon</h4>
                     <p class="card-text">The curly hair specialist</p>
                     <!-- collapsible part -->
-                    <a href="#profile" class="btn btn-primary" data-toggle="collapse">See Profile</a>
-                    <div id="profile" class="collapse p-3">
-                        <p>Jules has been cutting hair for 10 years ... </p>
+                    <a href="#profile2" class="btn btn-primary" data-toggle="collapse">See Profile</a>
+                    <div id="profile2" class="collapse p-3">
+                        <p>Stay fresh, come by for a haircut</p>
                     </div>
                 </div>
             </div>
@@ -204,6 +219,28 @@
     </div>
 
 
+    <div class="container" id="where">
+        <h2>Where to find us</h2>
+        <div class="row">
+            <div class="col">
+                <strong>HELLO</strong>  <br>
+                Phone: 613-424-1141 <br>
+                Email:  info@bigboybarbers.ca <br>
+            </div>
+            <div class="col">
+                <strong>ADDRESS</strong> <br>
+                3000 St Joseph Blvd <br>
+                Ottawa ON K1E 1E2 <br>
+                Canada <br>
+            </div>
+            <div class="col">
+                <strong>HOURS</strong> <br>
+                Monday - Saturday: 9 AM - 6 PM <br>
+                Sunday: CLOSED <br>
+            </div>
+        </div>
+
+    </div>
 
 
 
@@ -213,7 +250,7 @@
     <div class="container">
         <h2>How did you hear about us?</h2>
         <!-- Trigger the modal with a button -->
-        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#mySurvey">Open Survey</button>
+        <button type="button" class="btn btn-info btn-lg btn-dark" data-toggle="modal" data-target="#mySurvey">Open Survey</button>
           
         <!-- Modal -->
         <div class="modal fade" id="mySurvey" role="dialog">
@@ -229,10 +266,13 @@
                         <p>Tell us:</p>
                         <form>
                           <div class="checkbox">
-                            <label><input type="checkbox" value="">Option 1</label>
+                            <label><input type="checkbox" value="">Social Media</label>
                           </div>
                           <div class="checkbox">
-                            <label><input type="checkbox" value="">Option 2</label>
+                            <label><input type="checkbox" value="">From a friend</label>
+                          </div>
+                          <div class="checkbox">
+                            <label><input type="checkbox" value="">By yourself</label>
                           </div>
                         </form>
                     </div>

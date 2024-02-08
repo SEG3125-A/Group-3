@@ -4,11 +4,46 @@
 */
 
 /* Bootstrap default font-family is Helvetica Neue */
-h1 {
-  font-family: "Times New Roman", Times, serif;
-  text-shadow: 3px 3px 1px black;
-  
+h1{
+  margin: 60px auto 0 auto;
+  font-family: 'Licorice', cursive;
+  font-size: 625%;
+  color: #BAA1CE;
+  line-height: 200%;
 }
+
+h3{
+  font-family: 'Montserrat Alternates', sans-serif;
+  color: #BF9FD1;
+  font-weight: normal; 
+}
+
+#slogan{
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-size: 3rem;
+  color: #BF9FD1;
+  font-weight: normal;  
+}
+
+.text{
+  font-family: 'Montserrat Alternates';
+}
+
+p{
+  color:white ;
+}
+
+a{
+  color:black ;
+  text-decoration: none;
+  display: inline;
+  text-align: center;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+
+
 
 body {
   background-color: #BAA1CE;
