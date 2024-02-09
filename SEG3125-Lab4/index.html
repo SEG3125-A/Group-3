@@ -28,6 +28,19 @@
 
     <!-- Your own additional style sheet -->
     <link href="styles/style.css" rel="stylesheet" type="text/css">
+
+    <script>
+        // JavaScript to allow only one checkbox to be selected at a time for single select
+        function singleSelectCheck(thisCheckbox){
+            if(thisCheckbox.checked){
+                let groupName = 'single-select';
+                let checkboxes = document.querySelectorAll('input[name="' + groupName + '"]');
+                checkboxes.forEach((item) => {
+                    if (item !== thisCheckbox) item.checked = false;
+                });
+            }
+        }
+    </script>
 </head>
 
 
@@ -122,17 +135,17 @@
                     <div class="row">
                         <select name="haircuts" id="haircuts" multiple>
                             <div class="col"> 
-                                <input type="checkbox" value="haircut">  Haircut<br> <br></input> 
+                                <input type="checkbox" value="haircut" name="single-select" onclick="singleSelectCheck(this);">  Haircut<br> <br></input> 
                                 <img src="images/barber1.jpeg" alt="" width="200" height="200"> 
                             </div>
                             
                         <div class="col">
-                            <input type="checkbox" value="Fade">  Fade<br></input>
+                            <input type="checkbox" value="Fade" name="single-select" onclick="singleSelectCheck(this);">  Fade<br></input>
                             <img src="images/barber2.jpeg" alt="" width="200" height="200">
                         </div>
                             
                         <div class="col">
-                            <input type="checkbox" value="BeardTrim">  Beard Trim<br></input>
+                            <input type="checkbox" value="BeardTrim" name="single-select" onclick="singleSelectCheck(this);">  Beard Trim<br></input>
                             <img src="images/barber3.jpeg" alt="" width="200" height="200">
                         </div>
                         </select>
