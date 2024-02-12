@@ -31,9 +31,9 @@
 
     <script>
         // JavaScript to allow only one checkbox to be selected at a time for single select
-        function singleSelectCheck(thisCheckbox){
+        function singleSelectCheck(thisCheckbox,groupName){
             if(thisCheckbox.checked){
-                let groupName = 'single-select';
+                //let groupName = 'single-select';
                 let checkboxes = document.querySelectorAll('input[name="' + groupName + '"]');
                 checkboxes.forEach((item) => {
                     if (item !== thisCheckbox) item.checked = false;
@@ -58,12 +58,32 @@
 
     <!-- Bootstrap contains a grid system you can explore https://www.w3schools.com/bootstrap4/bootstrap_grid_system.asp -->
     <!-- It can be useful for placement of information -->
-    <div class="row p-3">
-        <div class="col-md-3 text-center text"> <a href="#AboutUs">About us</a> </div>
-        <div class="col-md-3 text-center text"> <a href="#service">Service</a></div>
-        <div class="col-md-3 text-center text"><a href="#team">Our team</a></div>
-        <div class="col-md-3 text-center text"><a href="#where">Where to find us</a></div>
-    </div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">BBB</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#AboutUs">About Us </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#service">Service</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#team">Our team</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#where">Where to find us</a>
+              </li>
+          </ul>
+          <span class="navbar-text">
+            Barbershop
+          </span>
+        </div>
+      </nav>
+
 
     <div class="container">
         <div class="row">
@@ -154,6 +174,34 @@
                         
                     
                 </div>
+            
+                <div class="card text-white bg-dark mb-3">
+                    <div class="card-header">
+                        <a class="collapsed card-link text-white" data-toggle="collapse" href="#collapseBarber">Choose a barber</a>
+                    </div>
+                    <div id="collapseBarber" class="collapse" data-parent="#accordion">
+                        <div class="card-body">
+                            <p>Which barber?</p>
+                            <!-- Bootstrap has various input components. Some examples are given here: -->
+                            <!-- Component shown here: https://v4-alpha.getbootstrap.com/components/forms/#textual-inputs -->
+                            <div class="row">
+                                <select name="haircuts" id="haircuts" multiple>
+                                    <div class="col"> 
+                                        <input type="checkbox" value="haircut" name="single-select-1" onclick="singleSelectCheck(this,'single-select-1');">  Haircut<br> <br></input> 
+                                        <img src="images/steve.png" alt="" width="200" height="200"> 
+                                    </div>
+                                    
+                                <div class="col">
+                                    <input type="checkbox" value="Fade" name="single-select-1" onclick="singleSelectCheck(this,'single-select-1');">  Fade<br></input>
+                                    <img src="images/leon.png" alt="" width="200" height="200">
+                                </div>
+                                    
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             <div class="card text-white bg-dark mb-3">
                 <div class="card-header">
                     <a class="collapsed card-link text-white" data-toggle="collapse" href="#collapseDate">Choose a date</a>
@@ -163,19 +211,11 @@
                         <p>What date?</p>
                         <!-- Bootstrap has various input components. Some examples are given here: -->
                         <!-- Component shown here: https://v4-alpha.getbootstrap.com/components/forms/#textual-inputs -->
-                        <div class="row">
-                            <select name="haircuts" id="haircuts" multiple>
-                                <div class="col"> 
-                                    <input type="checkbox" value="haircut" name="single-select-1" onclick="singleSelectCheck(this,'single-select-1');">  Haircut<br> <br></input> 
-                                    <img src="images/steve.png" alt="" width="200" height="200"> 
-                                </div>
-                                
-                            <div class="col">
-                                <input type="checkbox" value="Fade" name="single-select-1" onclick="singleSelectCheck(this,'single-select-1');">  Fade<br></input>
-                                <img src="images/leon.png" alt="" width="200" height="200">
+                        <div class="form-group row">
+                            <label for="dateTimeInput" class="col-2 col-form-label">Date and time</label>
+                            <div class="col-10">
+                                <input class="form-control" type="datetime-local" value="2011-08-19T13:45:00" id="dateTimeInput">
                             </div>
-                                
-                            </select>
                         </div>
                     </div>
                 </div>
@@ -201,6 +241,101 @@
                     </div>
                 </div>
             </div>
+
+            <div class="card text-white bg-dark mb-3">
+                <div class="card-header">
+                    <a class="collapsed card-link text-white" data-toggle="collapse" href="#collapsePayment">Choose a method of payment</a>
+                </div>
+                <div id="collapsePayment" class="collapse" data-parent="#accordion">
+                    <div class="card-body">
+                        <p>Payment</p>
+                        <div class="row">
+                            <div class="col-75">
+                              <div class="container">
+                                <form action="/action_page.php">
+                          
+                                  <div class="row">
+                                    <div class="col-50">
+                                      <h3>Billing Address</h3>
+                                      <label for="fname"><i class="fa fa-user"></i> Full Name</label>
+                                      <input type="text" id="fname" name="firstname" placeholder="John M. Doe">
+                                      <label for="email"><i class="fa fa-envelope"></i> Email</label>
+                                      <input type="text" id="email" name="email" placeholder="john@example.com">
+                                      <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
+                                      <input type="text" id="adr" name="address" placeholder="542 W. 15th Street">
+                                      <label for="city"><i class="fa fa-institution"></i> City</label>
+                                      <input type="text" id="city" name="city" placeholder="New York">
+                          
+                                      <div class="row">
+                                        <div class="col-50">
+                                          <label for="state">State</label>
+                                          <input type="text" id="state" name="state" placeholder="NY">
+                                        </div>
+                                        <div class="col-50">
+                                          <label for="zip">Zip</label>
+                                          <input type="text" id="zip" name="zip" placeholder="10001">
+                                        </div>
+                                      </div>
+                                    </div>
+                          
+                                    <div class="col-50">
+                                      <h3>Payment</h3>
+                                      <label for="fname">Accepted Cards</label>
+                                      <div class="icon-container">
+                                        <img src="images/cards.png" alt="" width="350" height="100">
+                                      </div>
+                                      <label for="cname">Name on Card</label>
+                                      <input type="text" id="cname" name="cardname" placeholder="John More Doe">
+                                      <label for="ccnum">Credit card number</label>
+                                      <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
+                                      <label for="expmonth">Exp Month</label>
+                                      <input type="text" id="expmonth" name="expmonth" placeholder="September">
+                          
+                                      <div class="row">
+                                        <div class="col-50">
+                                          <label for="expyear">Exp Year</label>
+                                          <input type="text" id="expyear" name="expyear" placeholder="2018">
+                                        </div>
+                                        <div class="col-50">
+                                          <label for="cvv">CVV</label>
+                                          <input type="text" id="cvv" name="cvv" placeholder="352">
+                                        </div>
+                                      </div>
+                                    </div>
+                          
+                                  </div>
+                                  <label>
+                                    <input type="checkbox" checked="checked" name="sameadr"> Shipping address same as billing
+                                  </label>
+                                  <input type="submit" value="Continue to checkout" class="btn">
+                                </form>
+                              </div>
+                            </div>
+                          
+                            <div class="col-25">
+                              <div class="container">
+                                <h4>Cart
+                                  <span class="price" style="color:black">
+                                    <i class="fa fa-shopping-cart"></i>
+                                    <b>4</b>
+                                  </span>
+                                </h4>
+                                <p><a href="#">Product 1</a> <span class="price">$15</span></p>
+                                <p><a href="#">Product 2</a> <span class="price">$5</span></p>
+                                <p><a href="#">Product 3</a> <span class="price">$8</span></p>
+                                <p><a href="#">Product 4</a> <span class="price">$2</span></p>
+                                <hr>
+                                <p>Total <span class="price" style="color:black"><b>$30</b></span></p>
+                              </div>
+                            </div>
+                          </div>
+                                
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
 
