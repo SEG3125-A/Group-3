@@ -10,7 +10,7 @@
 
 <!-- The head should contain an appropriate title for your site -->
 <head>
-    <title>Module 4 - Labo</title>
+    <title>Lab 5</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Big Boy Barbers</title>
@@ -29,18 +29,7 @@
     <!-- Your own additional style sheet -->
     <link href="styles/style.css" rel="stylesheet" type="text/css">
 
-    <script>
-        // JavaScript to allow only one checkbox to be selected at a time for single select
-        function singleSelectCheck(thisCheckbox,groupName){
-            if(thisCheckbox.checked){
-                //let groupName = 'single-select';
-                let checkboxes = document.querySelectorAll('input[name="' + groupName + '"]');
-                checkboxes.forEach((item) => {
-                    if (item !== thisCheckbox) item.checked = false;
-                });
-            }
-        }
-    </script>
+    <script src="scripts/main.js"></script>
 </head>
 
 
@@ -252,7 +241,7 @@
                         <div class="row">
                             <div class="col-75">
                               <div class="container">
-                                <form action="/action_page.php">
+                                <form action="" onsubmit="validate()">
                           
                                   <div class="row">
                                     <div class="col-50">
@@ -268,12 +257,12 @@
                           
                                       <div class="row">
                                         <div class="col-50">
-                                          <label for="state">State</label>
-                                          <input type="text" id="state" name="state" placeholder="NY">
+                                          <label for="prov">Province</label>
+                                          <input type="text" id="prov" name="prov" placeholder="ON">
                                         </div>
                                         <div class="col-50">
-                                          <label for="zip">Zip</label>
-                                          <input type="text" id="zip" name="zip" placeholder="10001">
+                                          <label for="postal">Zip</label>
+                                          <input type="text" id="postal" name="postal" placeholder="M5V 3L9">
                                         </div>
                                       </div>
                                     </div>
@@ -287,9 +276,9 @@
                                       <label for="cname">Name on Card</label>
                                       <input type="text" id="cname" name="cardname" placeholder="John More Doe">
                                       <label for="ccnum">Credit card number</label>
-                                      <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
+                                      <input type="text" id="ccnum" name="cardnumber" placeholder="1111 2222 3333 4444">
                                       <label for="expmonth">Exp Month</label>
-                                      <input type="text" id="expmonth" name="expmonth" placeholder="September">
+                                      <input type="text" id="expmonth" name="expmonth" placeholder="08">
                           
                                       <div class="row">
                                         <div class="col-50">
