@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	
+	  <!-- Style sheet (CSS) and JavaScript scripts necessary to use Bootstrap -->
+	  <link rel="stylesheet" type="text/css" href="/assets/css/style.css"> 
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script> 
+	  <script src="/assets/action.js"></script>   
+
+	<title>Group 3 - Survey (Lab 1)</title>
+</head>
+<body>
+	<form id="myform" action="" >
+		<br>
+		<br>
+        <h1>Survey</h1>
+		<!-- <! Choose a website to evaluate > -->
+		<h2 id="text">What do you think of the UI in this <a href="https://mexicancrazycorn.com/">Mexican Crazy Corn</a> site?</h2>	
+		<br>
+		<br>
+		<!-- <! You should make your image clickable> -->
+		<div id="image"><a href="https://mexicancrazycorn.com/"><img src="/assets/images/mexicoCorn.png" alt="https://mexicancrazycorn.com/" width="450" height="300"></a></div>
+		<br>
+		<br>
+        
+		<!--Question One-->
+		<div class="question">
+		<h2> Question 1: What do you think of the Corn? </h2>
+		<p>Thoughts: <input type="text" name="cornThoughts"></p>
+		<!-- <p>Last name: <input type="text" name="lastname"></p> -->
+		<br>
+		<br>
+		</div>	
+
+        <hr>
+
+		<!--Question Two-->
+		<div class="question">
+		<h2> Question 2: What Color would you rather have the website be? </h2>
+			<input type="radio" name="websiteColor" value="red">Red<br>
+			<input type="radio" name="websiteColor" value="green">Green<br>
+			<input type="radio" name="websiteColor" value="blue">Blue<br>
+		<br>
+		</div>
+
+        <hr>
+
+		<!--Question Two point Five-->
+		<div class="question">
+			<h2> Question 3: What do you like most about the website</h2>
+			I like:<br>
+			<select name="likeWebsite" id="color">
+				<option value="pick" selected="selected">Pick One</option>
+				<option value="corn">The Corn Pic</option>
+				<option value="toolbar">The Toolbar</option>
+				<option value="background">The Background</option>
+				<option value="layout">The Layout</option>
+			</select>
+			<br>
+		</div>
+
+		<hr>
+
+		<!--Question Four-->
+
+		<div class="question">
+			<h2>Question 4: How do YOU like your Corn Cooked?</h2>
+			<input type="checkbox" name="cornCooked" value="Boiled">Boiled<br>
+			<input type="checkbox" name="cornCooked" value="Grilled">Grilled<br>
+			<input type="checkbox" name="cornCooked" value="Fried">Fried<br>
+			<input type="checkbox" name="cornCooked" value="Baked">Baked<br>
+			<input type="checkbox" name="cornCooked" value="Crazy?">Crazy<br>
+		</div>
+
+        <hr>
+
+		<!--Question Four-->
+		<div class="question">
+			<h2>Question 5: What do you enjoy most about this website? What do you dislike about this website?</h2>
+            <textarea rows="5" cols="40" name="dislikeWebsite"></textarea>
+		</div>
+		
+        <hr>
+
+		<!--Question Five-->
+		<div class="question">
+			<h2>Question 6: What elements about the website do you enjoy?</h2>
+            <input type="checkbox" name="elementsWebsite" value="colors">
+            <label for="colors">The Colours</label><br>
+            <input type="checkbox" name="elementsWebsite" value="images">
+            <label for="images">The Images</label><br>
+            <input type="checkbox" name="elementsWebsite" value="structure">
+            <label for="structures">The Structure</label><br>
+            <input type="checkbox" name="elementsWebsite" value="design">
+            <label for="colors">The Design</label><br>
+            <input type="checkbox" name="elementsWebsite" value="creativity">
+            <label for="colors">The Creativity</label><br>
+            <hr>
+		</div>
+
+		<!--Comments!-->
+		<h2>Comments:</h2>
+		<br>
+		<textarea rows="5" cols="30" name="comments"></textarea>
+				
+		<br>
+		<br>
+				
+		<button id="submitButton" type="submit" class="block">
+			SUBMIT your questionnaire
+		</button>
+			
+		<p id="signature">Site created by Group 3: Yasin Elmi, Oluwatobiloba Ogunbi, Michael Thompson, Adam Orchard</p>	
+		
+		</form>
+</body>
+</html>

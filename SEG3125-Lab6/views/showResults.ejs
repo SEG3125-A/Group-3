@@ -1,0 +1,51 @@
+<html lang="en-US">
+<head>
+    <title>Survey Analysis</title>
+</head>
+
+<body>
+    <h1>Survey analysis</h1>
+    <h2>What people think of Corn</h2>
+    <ul>
+    <% for (var i=0; i<results[0].length; i++){ %>
+        <li><%= results[0][i].cornThoughts %> :  <%= results[0][i].count %></li>
+    <% } %>    
+    </ul>
+    <h2>Website color preference</h2>
+    <ul>
+    <% for (var i=0; i<results[1].length; i++){ %>
+        <li><%= results[1][i].websiteColor %> :  <%= results[1][i].count %></li>
+    <% } %>    
+    </ul>
+    <h2>What people like most about the website</h2>
+    <ul>
+    <% for (var i=0; i<results[2].length; i++){ %>
+        <li><%= results[2][i].likeWebsite %> :  <%= results[2][i].count %></li>
+    <% } %>    
+    </ul>
+	<h2>How people like their corn Cooked</h2>
+    <ul>
+    <% for (var i=0; i<results[3].length; i++){ %>
+        <li><%= results[3][i].cornCooked %> :  <%= results[3][i].count %></li>
+    <% } %>    
+    </ul>
+	<h2>What people like and dislike about the website</h2>
+    <ul>
+    <% for (var i=0; i<results[4].length; i++){ %>
+        <li><%= results[4][i].dislikeWebsite %> :  <%= results[4][i].count %></li>
+    <% } %>    
+    </ul>
+	<h2>What elements of the website people enjoy</h2>
+    <ul>
+    <% for (var i=0; i<results[5].length; i++){ %>
+        <li><%= results[5][i].elementsWebsite %> :  <%= results[5][i].count %></li>
+    <% } %>    
+    </ul>
+	<h2>Comments</h2>
+    <ul>
+    <% for (var i=0; i<results[6].length; i++){ %>
+        <li><%= results[6][i].comments %> :  <%= results[6][i].count %></li>
+    <% } %>    
+    </ul>
+</body>
+</html>
