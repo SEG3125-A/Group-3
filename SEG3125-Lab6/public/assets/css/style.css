@@ -1,12 +1,8 @@
-html{
-	background-color: rgb(187, 187, 187);
-}
 
 h1{
 	font-size: 100px;
 	text-align: center;
 	text-decoration-color: #355E3B;
-	text-shadow: 5px 5px 5px black;
 }
 
 h2{
