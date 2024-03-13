@@ -14,17 +14,18 @@ app.set('view engine', 'ejs');
 
 // static file serving
 app.use(express.static(path.join(__dirname,'./public')));
+app.use(express.static(path.join(__dirname,'./views')));
 
 app.get('/', function(req, res){
-	res.sendFile(__dirname+'/views/home.html');
+	res.sendFile((path.join(__dirname, 'views', 'home.html')));
 });
 
 app.get('/gallery', function(req, res){
-	res.sendFile(__dirname+'/views/gallery.html');
+	res.sendFile(path.join(__dirname, 'views', 'gallery.html'));
 });
 
 app.get('/profile', function(req, res){
-	res.sendFile(__dirname+'/views/profile.html');
+	res.sendFile(path.join(__dirname, 'views', 'profile.html'));
 });
 
 // listen to port
