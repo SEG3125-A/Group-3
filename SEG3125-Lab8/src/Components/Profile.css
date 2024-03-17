@@ -1,0 +1,24 @@
+/* Custom green theme styles */
+.btn-primary, .btn-outline-primary:hover {
+	background-color: #8EB288;
+	border-color: #8EB288;
+  }
+  
+  .btn-outline-primary {
+	color: #8EB288;
+	border-color: #8EB288;
+  }
+  
+  .btn-outline-primary:hover {
+	color: #fff;
+  }
+  
+  .card-header, .btn-primary {
+	background-color: #8EB288;
+	border-color: #8EB288;
+  }
+  
+  .card-link, .card-link:hover {
+	color: #8EB288;
+  }
+  
