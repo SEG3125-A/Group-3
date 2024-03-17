@@ -1,0 +1,53 @@
+.create-post-wrapper {
+	max-width: 600px;
+	margin: 40px auto;
+	padding: 20px;
+	background-color: #f0fff4; /* Light green background for the form area */
+	border-radius: 8px;
+	box-shadow: 0 2px 4px rgba(0, 128, 0, 0.2); /* Subtle green shadow */
+  }
+  
+  .form-title {
+	text-align: center;
+	color: #006400; /* Dark green color */
+  }
+  
+  .create-post-form {
+	display: flex;
+	flex-direction: column;
+  }
+  
+  .form-label {
+	margin-top: 20px;
+	margin-bottom: 8px;
+	color: #008000; /* Green color */
+  }
+  
+  .form-input, .form-textarea {
+	padding: 10px;
+	border-radius: 4px;
+	border: 1px solid #008000; /* Green border */
+	margin-bottom: 20px; /* Adjusts space between form elements */
+	background-color: #f9fff9; /* Very light green background for inputs */
+	color: #004d00; /* Dark green text */
+  }
+  
+  .form-textarea {
+	resize: vertical; /* Allows vertical resizing of the textarea */
+  }
+  
+  .submit-button {
+	background-color: #4CAF50; /* Bright green background */
+	color: white;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	font-size: 16px;
+	transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+  }
+  
+  .submit-button:hover {
+	background-color: #367b37; /* Darker green on hover */
+  }
+  

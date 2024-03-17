@@ -19,7 +19,7 @@ const HeadNavBar = ()  => (
                     <Nav className="nav-left me-auto text-white" >
                         <Nav.Link activeClassName={classes.active} as={NavLink} to="/Home">Home</Nav.Link>
                         <Nav.Link activeClassName={classes.active} as={NavLink} to="/Gallery">Gallery</Nav.Link>
-                        <Nav.Link activeClassName={classes.active} as={NavLink} to="/Post">Create a Post</Nav.Link>
+                        <Nav.Link activeClassName={classes.active} as={NavLink} to="/CreatePost">Create a Post</Nav.Link>
                         <Nav.Link activeClassName={classes.active} as={NavLink} to="/Profile">Profile</Nav.Link>
                         <Nav.Link activeClassName={classes.active} as={NavLink} to="/Settings">Settings</Nav.Link>
                     </Nav>
