@@ -1,0 +1,10 @@
+.navlinks a {
+    color: #ededed;
+    text-decoration: none;
+}
+
+.navlinks a:hover,
+.navlinks a:active,
+.navlinks a.active {
+    color: white;
+}
