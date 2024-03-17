@@ -3,6 +3,10 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+// The MAIN MAIN JS file, connects our component files to the DOM
+// Most, if not all, editing in page content (using react) is to be done in App.js
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

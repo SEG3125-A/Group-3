@@ -11,3 +11,12 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.overflow-content {
+  max-width: 350px;
+  overflow-y: scroll;
+}
+
+.navbar-brand-center {
+  justify-content: center;
+}
