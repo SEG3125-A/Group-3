@@ -1,0 +1,9 @@
+{
+	"nav" : {
+		"home": "Home",
+		"gallery": "Gallery",
+		"createPost": "Create Post",
+		"profile": "Profile",
+		"settings": "Settings"
+	} 
+}

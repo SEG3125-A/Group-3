@@ -1,0 +1,9 @@
+{
+	"nav" : {
+		"home": "Accueil",
+		"gallery": "Galerie",
+		"createPost": "Créer un poste",
+		"profile": "Profil",
+		"settings": "Paramètres"
+	} 
+}

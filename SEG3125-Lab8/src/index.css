@@ -20,3 +20,31 @@ code {
 .navbar-brand-center {
   justify-content: center;
 }
+
+/* Language Switcher Button Styles */
+.button-language {
+  background-color: #4CAF50; /* Green background */
+  color: white; /* White text */
+  padding: 10px 20px; /* Padding around the text */
+  border: none; /* No border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Cursor changes to pointer to indicate it's clickable */
+  font-size: 16px; /* Font size */
+  transition: background-color 0.3s, transform 0.3s; /* Smooth transition for hover effects */
+}
+
+.button-language:hover, .button-language:focus {
+  background-color: #45a049; /* Darker shade of green on hover/focus */
+  transform: scale(1.05); /* Slightly increase the button size on hover/focus */
+}
+
+.button-language:active {
+  transform: scale(0.95); /* Slightly decrease the button size when clicked */
+}
+
+/* Optional: adding a small icon before the text */
+.button-language:before {
+  content: "\1F310"; /* Globe Unicode character as an example */
+  margin-right: 8px; /* Space between the icon and the text */
+  display: inline-block;
+}
