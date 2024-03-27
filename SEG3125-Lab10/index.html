@@ -1,0 +1,434 @@
+<!-- This file contains many elements adapted from the online tutoral -->
+<!-- on Bootstrap 4 as found here: https://www.w3schools.com/bootstrap4/default.asp -->
+
+<!-- Images source: -->
+<!-- jule.jpg taken from https://www.freepik.com/premium-vector/cartoon-successful-hairdresser_3951066.htm -->
+<!-- Erwind.jpb https://www.kijiji.ca/v-construction-trades-jobs/winnipeg/bicycle-mechanic/1499188319 -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- The head should contain an appropriate title for your site -->
+<head>
+    <title>Lab 5</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Big Boy Barbers</title>
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Licorice&family=Merriweather&family=Montserrat+Alternates&display=swap" rel="stylesheet">
+
+    <!-- Style sheet (CSS) and JavaScript scripts necessary to use Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>    
+
+    <!-- Your own additional style sheet -->
+    <link href="styles/style.css" rel="stylesheet" type="text/css">
+
+    <script src="scripts/main.js"></script>
+</head>
+
+
+<body>
+
+    <!-- Medium size container, padding 3, margins 3, background dark, text is white -->
+    <!-- Should show the name of your company with an image or logo -->
+    <!-- Bootstrap has its own font for H1, H2, p, etc.  -->
+    <!-- Look in BS4 Typography https://www.w3schools.com/bootstrap4/bootstrap_typography.asp -->
+    <!-- Use your own CSS file to change those fonts if they do not correspond to your company's look -->
+    <div class="container-md p-3 my-3 border bg-dark text-white">
+        <h1 class="text-center">Big Boy Barbers</h1>
+        <p class="text-center" id="slogan">We only cut hair for big boys</p>
+    </div>
+
+    <!-- Bootstrap contains a grid system you can explore https://www.w3schools.com/bootstrap4/bootstrap_grid_system.asp -->
+    <!-- It can be useful for placement of information -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">BBB</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#AboutUs">About Us </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#service">Service</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#team">Our team</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#where">Where to find us</a>
+              </li>
+          </ul>
+          <span class="navbar-text">
+            Barbershop
+          </span>
+        </div>
+      </nav>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <img src="images/barber5.jpeg" alt="">
+            </div>
+            <div class="col">
+                <img src="images/logo.png" alt="" width="400" height="400">
+            </div>
+        </div>
+        
+    </div>
+
+    <!-- When you have messages to tell, remember that center align is not always the best choice -->
+    <div class="container-md p-3 my-3 border bg-dark text-success" id="AboutUs">
+        <h3>Let us tell you about our expertise</h3>
+        <p class="text">Here at Fine Grooming we offer high quality grooming services to meet all mens needs. We pride ourselves on going above and beyond the call of duty and ensure all customers leave highly satisfied. <br><br>
+        With an inclusive and respectful ambiance, you will feel at home  and enjoy the playful bantering amongst team members.<br> <br>
+        When you sit in our chair, not only will you receive distinctive grooming services, you will experience the highly sought after timeless barber-to-client relationship which we perpetuate.<br></p>
+
+    </div>
+
+    <!-- Bootstrap has different types of tables https://www.w3schools.com/bootstrap4/bootstrap_tables.asp -->
+    <!-- Might be (or not) useful to show some information to the user -->
+    <div class="container" id="service">
+        <h2>Services offered</h2>    
+        <table class="table table-primary table-hover table-dark">
+            <thead>
+            <tr>
+                <th>Service</th>
+                <th>Description</th>
+                <th>Price</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Full Haircut</td>
+                <td>REGULAR HAIRCUT/FADE HAIRCUT + BEARD TRIM</td>
+                <td>30$</td>
+            </tr>
+            <tr>
+                <td>Fade</td>
+                <td>AMAZING FADE HAIRCUT</td>
+                <td>15$</td>
+            </tr>
+            <tr>
+                <td>Beard Trim</td>
+                <td>EXQUISITE BEARD TRIM</td>
+                <td>10$</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+ <!-- Collapsible with multiple items - accordion -->
+    <!-- https://www.w3schools.com/bootstrap4/bootstrap_collapse.asp -->
+    <!-- As we want to do a vertical navigation better suited for mobile design, an accordion pattern -->
+    <!-- could work well.  You can use other patterns too.  This is just an example. -->
+    <div class="container p-3 my-3">
+        <div id="accordion">
+            <div class="card text-white bg-dark mb-3">
+                <div class="card-header">
+                    <a class="card-link text-white" data-toggle="collapse" href="#collapseService">Choose a service</a>
+                </div>
+                <div id="collapseService" class="collapse show" data-parent="#accordion">
+                    <div class="card-body ">
+                        <p>Here is our list of services</p>
+                    </div>
+                    <div class="row">
+                        <select name="haircuts" id="haircuts" multiple>
+                            <div class="col"> 
+                                <input type="checkbox" value="haircut" name="single-select" onclick="singleSelectCheck(this,'single-select');">  Haircut<br> <br></input> 
+                                <img src="images/barber1.jpeg" alt="" width="200" height="200"> 
+                            </div>
+                            
+                        <div class="col">
+                            <input type="checkbox" value="Fade" name="single-select" onclick="singleSelectCheck(this,'single-select');">  Fade<br></input>
+                            <img src="images/barber2.jpeg" alt="" width="200" height="200">
+                        </div>
+                            
+                        <div class="col">
+                            <input type="checkbox" value="BeardTrim" name="single-select" onclick="singleSelectCheck(this,'single-select');">  Beard Trim<br></input>
+                            <img src="images/barber3.jpeg" alt="" width="200" height="200">
+                        </div>
+                        </select>
+                    </div>
+                        
+                        
+                    
+                </div>
+            
+                <div class="card text-white bg-dark mb-3">
+                    <div class="card-header">
+                        <a class="collapsed card-link text-white" data-toggle="collapse" href="#collapseBarber">Choose a barber</a>
+                    </div>
+                    <div id="collapseBarber" class="collapse" data-parent="#accordion">
+                        <div class="card-body">
+                            <p>Which barber?</p>
+                            <!-- Bootstrap has various input components. Some examples are given here: -->
+                            <!-- Component shown here: https://v4-alpha.getbootstrap.com/components/forms/#textual-inputs -->
+                            <div class="row">
+                                <select name="haircuts" id="haircuts" multiple>
+                                    <div class="col"> 
+                                        <input type="checkbox" value="haircut" name="single-select-1" onclick="singleSelectCheck(this,'single-select-1');">  Haircut<br> <br></input> 
+                                        <img src="images/steve.png" alt="" width="200" height="200"> 
+                                    </div>
+                                    
+                                <div class="col">
+                                    <input type="checkbox" value="Fade" name="single-select-1" onclick="singleSelectCheck(this,'single-select-1');">  Fade<br></input>
+                                    <img src="images/leon.png" alt="" width="200" height="200">
+                                </div>
+                                    
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            <div class="card text-white bg-dark mb-3">
+                <div class="card-header">
+                    <a class="collapsed card-link text-white" data-toggle="collapse" href="#collapseDate">Choose a date</a>
+                </div>
+                <div id="collapseDate" class="collapse" data-parent="#accordion">
+                    <div class="card-body">
+                        <p>What date?</p>
+                        <!-- Bootstrap has various input components. Some examples are given here: -->
+                        <!-- Component shown here: https://v4-alpha.getbootstrap.com/components/forms/#textual-inputs -->
+                        <div class="form-group row">
+                            <label for="dateTimeInput" class="col-2 col-form-label">Date and time</label>
+                            <div class="col-10">
+                                <input class="form-control" type="datetime-local" value="2011-08-19T13:45:00" id="dateTimeInput">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card text-white bg-dark mb-3">
+                <div class="card-header">
+                    <a class="collapsed card-link text-white" data-toggle="collapse" href="#collapseClientInfo">Your info</a>
+                </div>
+                <div id="collapseClientInfo" class="collapse" data-parent="#accordion">
+                    <div class="card-body">
+                        <p>Your information so we can contact you</p>
+                        <p>Form to enter name, email, phone</p>
+                        <div class="contact-clean">
+                            <form method="post">
+                                <h2 class="text-center">Contact us</h2>
+                                <div class="form-group"><input class="form-control" type="text" name="name" placeholder="Name"></div>
+                                <div class="form-group"><input class="form-control is-invalid" type="email" name="email" placeholder="Email"><small class="form-text text-danger">Please enter a correct email address.</small></div>
+                                <div class="form-group"><input class="form-control" type="text" name="phone" placeholder="Phone Number"></div>
+                                <div class="form-group"><textarea class="form-control" rows="14" name="message" placeholder="Message"></textarea></div>
+                                <div class="form-group"><button class="btn btn-primary" type="submit">send </button></div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card text-white bg-dark mb-3">
+                <div class="card-header">
+                    <a class="collapsed card-link text-white" data-toggle="collapse" href="#collapsePayment">Choose a method of payment</a>
+                </div>
+                <div id="collapsePayment" class="collapse" data-parent="#accordion">
+                    <div class="card-body">
+                        <p>Payment</p>
+                        <div class="row">
+                            <div class="col-75">
+                              <div class="container">
+                                <form action="" onsubmit="validate()">
+                          
+                                  <div class="row">
+                                    <div class="col-50">
+                                      <h3>Billing Address</h3>
+                                      <label for="fname"><i class="fa fa-user"></i> Full Name</label>
+                                      <input type="text" id="fname" name="firstname" placeholder="John M. Doe">
+                                      <label for="email"><i class="fa fa-envelope"></i> Email</label>
+                                      <input type="text" id="email" name="email" placeholder="john@example.com">
+                                      <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
+                                      <input type="text" id="adr" name="address" placeholder="542 W. 15th Street">
+                                      <label for="city"><i class="fa fa-institution"></i> City</label>
+                                      <input type="text" id="city" name="city" placeholder="New York">
+                          
+                                      <div class="row">
+                                        <div class="col-50">
+                                          <label for="prov">Province</label>
+                                          <input type="text" id="prov" name="prov" placeholder="ON">
+                                        </div>
+                                        <div class="col-50">
+                                          <label for="postal">Zip</label>
+                                          <input type="text" id="postal" name="postal" placeholder="M5V 3L9">
+                                        </div>
+                                      </div>
+                                    </div>
+                          
+                                    <div class="col-50">
+                                      <h3>Payment</h3>
+                                      <label for="fname">Accepted Cards</label>
+                                      <div class="icon-container">
+                                        <img src="images/cards.png" alt="" width="350" height="100">
+                                      </div>
+                                      <label for="cname">Name on Card</label>
+                                      <input type="text" id="cname" name="cardname" placeholder="John More Doe">
+                                      <label for="ccnum">Credit card number</label>
+                                      <input type="text" id="ccnum" name="cardnumber" placeholder="1111 2222 3333 4444">
+                                      <label for="expmonth">Exp Month</label>
+                                      <input type="text" id="expmonth" name="expmonth" placeholder="08">
+                          
+                                      <div class="row">
+                                        <div class="col-50">
+                                          <label for="expyear">Exp Year</label>
+                                          <input type="text" id="expyear" name="expyear" placeholder="2018">
+                                        </div>
+                                        <div class="col-50">
+                                          <label for="cvv">CVV</label>
+                                          <input type="text" id="cvv" name="cvv" placeholder="352">
+                                        </div>
+                                      </div>
+                                    </div>
+                          
+                                  </div>
+                                  <label>
+                                    <input type="checkbox" checked="checked" name="sameadr"> Shipping address same as billing
+                                  </label>
+                                  <input type="submit" value="Continue to checkout" class="btn">
+                                </form>
+                              </div>
+                            </div>
+                          
+                            <div class="col-25">
+                              <div class="container">
+                                <h4>Cart
+                                  <span class="price" style="color:black">
+                                    <i class="fa fa-shopping-cart"></i>
+                                   
+                                  </span>
+                                </h4>
+                               
+                                <hr>
+                                <p>Total <span class="price" style="color:black"><b>$30</b></span></p>
+                              </div>
+                            </div>
+                          </div>
+                                
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+     <!-- Presenting the staff with cards: https://www.w3schools.com/bootstrap4/bootstrap_cards.asp -->
+    <!-- Card columns allows multiple cards next to each other -->
+    <!-- The first card's button doesn't go anywhere, it could be a modal --> 
+    <!-- My second card limits the information seen and uses collapsible to show more -->
+    <div class="container p-3" id="team">
+        <h2>Meet our hairdressers</h2>
+        <div class="card-columns">
+            <div class="card bg-warning text-white bg-dark mb-3" style="width:200px">
+                <img class="card-img-top" src="images/steve.png" alt="Card image" style="width:100%">
+                <div class="card-body">
+                    <h4 class="card-title">Steve</h4>
+                    <p class="card-text">Hair wizard.</p>
+                    <a href="#profile1" class="btn btn-primary" data-toggle="collapse">See Profile</a>
+                    <div id="profile1" class="collapse p-3">
+                        <p>Puts a spell on your hair</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card bg-danger text-white bg-dark mb-3" style="width:200px">
+                <img class="card-img-top" src="images/leon.png" alt="Card image" style="width:100%">
+                <div class="card-body">
+                    <h4 class="card-title">Leon</h4>
+                    <p class="card-text">The curly hair specialist</p>
+                    <!-- collapsible part -->
+                    <a href="#profile2" class="btn btn-primary" data-toggle="collapse">See Profile</a>
+                    <div id="profile2" class="collapse p-3">
+                        <p>Stay fresh, come by for a haircut</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container" id="where">
+        <h2>Where to find us</h2>
+        <div class="row">
+            <div class="col">
+                <strong>HELLO</strong>  <br>
+                Phone: 613-424-1141 <br>
+                Email:  info@bigboybarbers.ca <br>
+            </div>
+            <div class="col">
+                <strong>ADDRESS</strong> <br>
+                3000 St Joseph Blvd <br>
+                Ottawa ON K1E 1E2 <br>
+                Canada <br>
+            </div>
+            <div class="col">
+                <strong>HOURS</strong> <br>
+                Monday - Saturday: 9 AM - 6 PM <br>
+                Sunday: CLOSED <br>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <!-- Including a modal https://www.w3schools.com/bootstrap4/bootstrap_modal.asp -->
+    <!-- Modals are useful for additional information or questions -->
+    <!-- Here the modal is used for a little survey -->
+    <div class="container">
+        <h2>How did you hear about us?</h2>
+        <!-- Trigger the modal with a button -->
+        <button type="button" class="btn btn-info btn-lg btn-dark" data-toggle="modal" data-target="#mySurvey">Open Survey</button>
+          
+        <!-- Modal -->
+        <div class="modal fade" id="mySurvey" role="dialog">
+            <div class="modal-dialog">  
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <h2>How did you hear about us?</h2>
+                        <p>Tell us:</p>
+                        <form>
+                          <div class="checkbox">
+                            <label><input type="checkbox" value="">Social Media</label>
+                          </div>
+                          <div class="checkbox">
+                            <label><input type="checkbox" value="">From a friend</label>
+                          </div>
+                          <div class="checkbox">
+                            <label><input type="checkbox" value="">By yourself</label>
+                          </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>     
+        </div>
+        </div>    
+    </div>
+    <img src="images/logo.png" alt="" width="400" height="400">
+
+   
+
+</body>
+</html>
